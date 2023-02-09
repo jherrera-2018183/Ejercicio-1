@@ -57,10 +57,9 @@ const putCategoria = async (req = request, res = response) => {
 const deleteCategoria = async(req = request, res = response) => {
     const { id } = req.params;
 
-    //const categoriaEliminado = await Categoria.findByIdAndDelete( id);
+    const categoriaEliminado = await Categoria.findByIdAndDelete( id);
 
-    //Eliminar cambiando el estado a false
-    const categoriaEliminado = await Categoria.findByIdAndUpdate(id, { estado: false });
+   // const categoriaEliminado = await Categoria.findByIdAndUpdate(id, { estado: false });
 
     res.json({
         msg: 'DELETE eliminar categoria',
